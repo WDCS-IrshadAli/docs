@@ -1,0 +1,172 @@
+<!-- 1st Video: -->
+pwd           : (parent working directory)
+cd /          : (to goto root directory)
+ls            : (list all files & folders)
+
+
+<!-- 2nd Video : ls (listing content) -->
+ls Downloads/ : (list all content of Downloads folder - from given list of files & folders)
+ls /          : (list content of root directory)
+(ls) (ls ~) (ls /home/webclues/) : (all are same redirect to home)
+ls ..         : (list 1 folder back content)
+ls ../..      : (list 2 folder back content)
+ls ../.. -l   : (list content on long format using: -l)
+ls -a         : (list hidden files on that folder)
+ls -al        : (list hidden files with long list combine)
+ls -lS        : (list content & sort your directory with size: with long list)'
+ls mernapp/frontend/src/*.js : (list files which ends with .js)
+ls Downloads/*.pdf : (list files which ends with pdf)
+ls Downloads/*.*   : (list files which ends with whatever ext.)
+ls -lS > out.txt   : (to save content of cmd into file)
+ls -d */           : (list only directories)
+man ls             : (man: it's dictionary for cmd: it list all cmd for ls)
+
+
+<!-- 3rd Video : cd (make & access folder) -->
+mkdir "my books" : to make folder with space name
+(cd my\ books) (cd "my books") (cd 'my books') : (to access space name folder)
+
+
+<!-- 4th Video : cat (read file) -->
+cat out.txt linux.txt : (it read  file & show content of file)
+cat -b out.txt        : (it adds numbering to lines: but it skips blank line)
+cat -n out.txt        : (it adds numbering to lines: but it doesn't skips blank line)
+cat -s out.txt        : (it squeezes no. of spacing to 1)
+cat -E list1.txt      : (it adds $ end of the line)
+man cat               : (to see all cmd related to cat)
+
+
+<!-- 5th Video : cat (create & append file) -->
+cat > test1.txt    : (to create file)
+cat > test1.txt    : (to overwrite same file)
+cat >> test1.txt   : (to append file)
+cat test1.txt list1.txt > out.txt : (copy content of both file to another out.txt file)
+cat test1.txt >> list.txt         : (to copy content of 1 file & append to another file)
+
+
+<!-- 6th Video : mkdir (make folder) -->
+mkdir image           : (create image folder)
+mkdir -p names/mark   : (it create parent & child both folders at the same time)
+mkdir -p names/ {john,tom,brady}: (it create multiple folders in names folder: {don't give spaces in {}})
+
+
+<!-- 7th Video : rm, rmdir (remove folder) -->
+rmdir abc          : (remove abc folder)
+mkdir -p abc/a/b/c : (create nested folder)
+ls abc -R          : (track parent & child folder of abc)
+rmdir -p abc/a/b/c : (remove whole directory)
+rmdir -pv abc/a/b/c: (remove whole directory & show track list how it's removing folder)
+rm -rv a/b/c/d/e   : (if folder contain contain some file & if you want to del that folder then use rm cmd -r = recursive (v for tracking))
+rm -r a            : (use this cmd to directly del folder: it can del nested folder as well) 
+
+
+<!-- 8th Video : cp (copy file to another file) (to track use -v / -vR) -->
+cp list1.txt list2.txt : (copy list1.txt file to list2.txt : if list2 not exists it creates)
+cp list1.txt Documents : (copy file to directory: (folder))
+cp list1.txt list2.txt Documents    : (copy 2 files to directory: (folder))
+cp -i list1.txt list2.txt Documents : (-i means interactive, which asks before overwriting)
+cp -i ../list1.txt ../list2.txt .   : (if you're in child folder 'Documents' & you want file from parent folder use this cmd)
+cp -R dir1 dir3   : (to copy whole folder dir1 to another non-existing folder dir3)
+
+
+<!-- 9th Video : mv (move file) -->
+mv list1.txt list5.txt   : (move 1 file to another non-existing file)
+mv list5.txt names/      : (move 1 file to names folder)
+mv brady john            : (move brady folder into john)
+mv -v list2.txt names    : (with vobos)
+man mv
+
+
+<!-- 10th Video : less -->
+less big.txt    : (it shows .txt file from starting: use space for to see pages & arrow for up & down: capital B for previous page: Shift+g for end of file)
+man less
+
+
+<!-- 11th Video : touch -->
+touch file5.txt : (to create file)
+touch file5.txt : (to change file time)
+
+
+<!-- 12th Video : nano -->
+nano file.txt : (to create file)
+
+
+<!-- 13th Video : sudo (administrator) -->
+-- if you're making folder & you get permission denied error
+ex: mkdir newdir :Permission denied
+to overcome this write, ex: sudo mkdir newdir
+
+
+<!-- 14th Video : top command -->
+top : it shows all apps task manager
+
+
+<!-- 15th Video : kill command -->
+pidof gnome-control-center : (to close sytem settings)
+kill 25309 & kill -KILL 25309 (force kill, not recommended)
+ps-ux    : (to list out which app are running)
+clear         : (clear terminal)
+
+
+<!-- 16th Video : echo cmd -->
+echo "HELLO" & echo HELLO
+myvar="MARK"
+echo $myvar
+
+
+<!-- 17th Video : file permissions & symbolic permissions & chmod (change permission) -->
+r=read & w=write & x=execute
+o=stands for other / +for adding permission & -for subtracting permission
+ugo = (user, group, other) alternative to use a=for all 3
+chmod o+w file5  : add write permission
+chmod g+x file5  : for changing permission to group to execute
+chmod g-wx file5 : to remove write & execution permission from group 
+chmod ug=rwx file5 : to change permission for user & group 
+chmod a-rwx file5 : (remove permission for all)
+chmod u+rw,g=rw,o+r file5 : (defining permission)
+
+
+<!-- 18th Video : directory (folder permission) -->
+it same work for directory replace filename with directory
+
+
+<!-- 19th Video : numerical permission -->
+20th Video : Bash scripting
+
+
+<!-- 21th Video : which & whatis command -->
+which cmd : to get location of app
+which firefox / which bash / which ls : /usr/bin/firefox = /usr/bin/bash = /usr/bin/ls
+whatis cmd : to get brief about app
+whatis ls   : (ls (1)               - list directory contents)
+whatis bash : (bash (1)             - GNU Bourne-Again SHell)
+
+
+<!-- 22th Video : useradd cmd (creating user) -->
+sudo useradd mark -m -s /bin/bash -g users -c "my comment"
+sudo passwd mark
+
+
+<!-- 23rd Video : userdel cmd (deleting user) -->
+sudo userdel mark
+sudo rm -r /home/mark/
+
+
+<!-- 24th Video : Basic group management(groups, add & del) -->
+groups : (to see groups)
+cat /etc/group : (list out groups)
+sudo groupadd cpp : (add group cmd)
+sudo groupadd python : (add group cmd)
+to see added groups : cat /etc/group
+sudo gpasswd -a webclues Python : (to add user webclues to group python cmd)
+sudo gpasswd -d webclues Python : (to remove user webclues to group python cmd)
+
+
+<!-- 25th Video : .bashrc file -->
+nano .bashrc
+gedit .bashrc
+
+
+
+
+
